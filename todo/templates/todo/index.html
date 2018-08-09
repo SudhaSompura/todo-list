@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Todo List</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'todo/style.css' %}">
+</head>
+<body>
+	<div class="whole_app"> 
+		<div class="header">Hey, Sudha!! WHAT DO YOU WANT TO DO TODAY?</div>
+		<div class="todo_form"> 
+			<form method="POST" action="{% url 'add' %}">
+				{% csrf_token %}
+				{{ form.todo_text }}
+				<button class="add">ADD</button> <br>				
+			</form>
+			<a href="{% url 'deletecompleted' %}"><button>DELETE COMPLETED</button></a>
+				<a href="{% url 'deleteall' %}"><button>DELETE ALL</button></a>
+		</div>
+		<div class="work">
+			{% for task in tasks %}
+				{% if task.task_done == True %}
+					<p class="task_done"> <span>{{ task.todo_text }} </span></p>
+				{% else %}
+					<a href="{% url 'complete' task.id %}"><p class="task_undone "> {{ task.todo_text }} </p></a>
+				{% endif %}
+			{% endfor %}
+		</div>
+	</div>
+</body>
+</html>

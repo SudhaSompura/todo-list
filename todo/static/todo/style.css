@@ -1,0 +1,114 @@
+body {
+	background-color: #a8abaf;
+	text-align: center;
+	font-family: "Times New Roman", Times, serif;
+}
+
+.whole_app{
+	position: absolute;
+	top: 50%;
+  	left: 50%;
+	margin: -300px 0 0 -250px;
+	text-align: center;
+	background-color: #efddb8;
+	padding: 20px;
+	width: 600px;
+}
+
+
+.header{
+	
+	color: #545251;
+	font-weight: bold;
+}
+
+.todo_text{
+	margin-top: 10px;
+	margin-bottom: 20px;
+	height: 40px;
+	width: 550px;
+	box-shadow: 1px 1px 1px gray;
+	color: #545251;
+	font-size: 16px;
+	font-weight: bold;
+	border-radius: 5px;
+}
+
+.todo_text::placeholder{
+	color: #d3d1cd;
+}
+
+button {
+	background-color: #f48c42;
+	padding: 10px;
+	text-transform: uppercase;
+	color: white;
+	font-weight: bold;
+	border: 0px;
+	border-radius: 5px;
+}
+
+.add {
+	margin-left: -10px;
+	height: 48px;
+	background-color: #605f5d;
+}
+
+
+.work {
+	color: #605f5d;
+	font-size: 17px;
+	margin-top: 20px;
+}
+
+.task_done {
+	background-color: #cdd0d6;
+	text-decoration: line-through;
+	padding: 8px;
+	margin: 0px;
+	text-align: left;
+	border-radius: 5px;
+	border-bottom: 1px solid;
+}
+
+a {
+	text-decoration: none;
+}
+
+.task_undone{
+	background-color: white;
+	padding: 8px;
+	margin: 0px;
+	text-align: left;
+	border-radius: 5px;
+	border-bottom: 1px solid;
+	color: #605f5d;
+	font-size: 17px;
+	text-decoration: none;
+}
+
+.checkbox{
+	float: left;
+}
+
+.input_data {
+	margin-bottom: 5px;
+	height: 30px;
+	width: 300px;
+	box-shadow: 1px 1px 1px gray;
+	color: #545251;
+	font-size: 13px;
+	font-weight: bold;
+	border-radius: 5px;
+	box-shadow: 5px 5px 5px gray;
+}
+
+.name_input {
+	width: 200px;
+	
+}
+
+.input_data::placeholder{
+	color: #d3d1cd;
+	text-align: center;
+}
